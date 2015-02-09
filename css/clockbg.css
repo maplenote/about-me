@@ -1,0 +1,5 @@
+body { background-color: rgba(255, 255, 255, 0.4); }
+body:before { content: ""; display: block; position: fixed; z-index: -1; top: 0; left: 0; width: 100%; height: 100%; background: #3ACFEB url("../img/bg.jpg") no-repeat fixed 100% 100%; -moz-background-size: auto 100%; -o-background-size: auto 100%; -webkit-background-size: auto 100%; background-size: auto 100%; }
+
+#clock { position: fixed; z-index: -1; right: -31.5vh; top: 11.5vh; width: 80vh; height: 80vh; margin: 10vh; }
+#clock:before { content: ""; display: block; width: 50%; height: 50%; border-right: 1vh solid #DFF8FB; -moz-transform-origin: 100% 100% 0; -webkit-transform-origin: 100% 100% 0; transform-origin: 100% 100% 0; -moz-transform: rotate(240deg); -ms-transform: rotate(240deg); -webkit-transform: rotate(240deg); transform: rotate(240deg); }
