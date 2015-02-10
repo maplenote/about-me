@@ -1,6 +1,6 @@
 /* Maple 2015.2.9  https://github.com/maplenote */
 var openTime = new Date().getTime();
-function reflashClock()
+function refreshClock()
 {
   var newTime = new Date().getTime();
   var deg = parseInt((newTime-openTime)/1000/10,10); //分針度數
@@ -15,6 +15,6 @@ function reflashClock()
   },'linear');
 }
 $(function(){
-  $("#btn").on('click',reflashClock);
-  setInterval(reflashClock,10000);
+  $("#btn").on('click',refreshClock);
+  setInterval(refreshClock,10000);
 });

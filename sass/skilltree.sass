@@ -1,22 +1,27 @@
 @import "compass/css3"
 .skillTree
+	font-size: 0.6rem
+	margin: 0.5rem
 	+transition-property(all)
 	+transition-duration(1s)
 	.del
-		background: rgba(255,246,0,0.3)
+		background: rgba(255,246,0,0.4)
 		text-decoration: line-through
 	.little
-		background: rgba(53, 206, 234,0.3)
+		background: rgba(53, 206, 234,0.4)
 		// rgba(121,207,216,0.3)
 	li
-		background: rgba(255,255,255,0.3)
+		background: rgba(255,255,255,0.4)
 		+border-radius(1em)
 		border-left: 1px solid #fff
+		border-right: 1px solid rgba(0,0,0,0.2)
 		border-bottom: 1px solid rgba(255,255,255,0.6)
 		margin-left: 0.2em
+		margin-top: 0.2em
 		margin-bottom: 0.2em
 		padding: 0.2em
 	ul
+		margin-left: 0
 		&:after
 			content: ''
 			display: block
@@ -25,8 +30,8 @@
 			display: block
 			float: left
 			line-height: 4em
-			min-width: 5em
+			min-width: 4em
 			text-align: center
-		ul
-			display: none
+		// ul
+		// 	display: none
 	 
