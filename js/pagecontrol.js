@@ -127,15 +127,17 @@ function nextAnimation(e)
     //換下一頁
     ++nowPageFlag;
     ++nowPageAnimData.nowStep;
-    $('body').animate({
-      scrollTop: pageList[nowPageFlag].top
-    }, 200, 'swing',function(){
-      if(nowPageAnimData.list.length>0)
-      {
-        doAnimation(nowPageAnimData.list[nowPageAnimData.nowStep]);
-      }
-    });
-    
+    //$docs.scrollTop(pageList[nowPageFlag].top);
+    //IE,FF用html有效,body無效; chrome用body有效,html無效
+    $('html,body').animate({
+      	scrollTop: pageList[nowPageFlag].top
+    	}, 200, 'swing',function(){
+	      if(nowPageAnimData.list.length>0)
+	      {
+	        doAnimation(nowPageAnimData.list[nowPageAnimData.nowStep]);
+	      }
+    	}
+    );
   }
   else
   {
@@ -218,7 +220,8 @@ function backAnimation(e)
   else
   {
     --nowPageFlag;
-    $('body').animate({
+    //IE,FF用html有效,body無效; chrome用body有效,html無效
+    $('html,body').animate({
       scrollTop: pageList[nowPageFlag].top
     }, 300, 'swing');
     //$docs.scrollTop(pageList[nowPageFlag].top);

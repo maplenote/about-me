@@ -24,10 +24,10 @@ strong { font-weight: bold; }
 
 figure.groupimg { margin-left: 2em; }
 figure img { margin: 0.2em; }
-figure img.fill { margin: 1em auto; width: 90vw; display: block; }
-figure img.maxHeight { max-height: 60vh; }
-figure img.maxWidth20 { max-width: 20vw; }
-figure img.maxWidth70 { max-width: 70vw; }
+figure img.fill { margin: 1em auto; width: 90%; width: 90vw; display: block; }
+figure img.maxHeight { max-height: 60%; max-height: 60vh; }
+figure img.maxWidth20 { max-width: 20%; max-width: 20vw; }
+figure img.maxWidth70 { max-width: 70%; max-width: 70vw; }
 
 a { color: #00f; }
 a:hover { color: #fff; }
@@ -37,7 +37,7 @@ a:hover { color: #fff; }
 .page ul { margin-left: 2rem; margin-right: 1rem; }
 
 #title { background: #3ACFEB url("../img/bg_title.jpg") no-repeat left top; -moz-background-size: auto 100%; -o-background-size: auto 100%; -webkit-background-size: auto 100%; background-size: auto 100%; -moz-background-size: auto 100vh; -o-background-size: auto 100vh; -webkit-background-size: auto 100vh; background-size: auto 100vh; text-align: center; }
-#title h1 { padding-top: 35vh; font-size: 2.5rem; vertical-align: midden; font-weight: bold; text-shadow: 1pt -1pt 0 #ffa7b3, -2pt 1pt 2pt #fff; background-color: rgba(255, 255, 255, 0.5); -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; height: 75%; line-height: 100%; -moz-box-shadow: 0px 0px 15px #999, 0px 0px 2px #000; -webkit-box-shadow: 0px 0px 15px #999, 0px 0px 2px #000; box-shadow: 0px 0px 15px #999, 0px 0px 2px #000; }
+#title h1 { padding-top: 2em; padding-top: 35vh; font-size: 2.5rem; vertical-align: midden; font-weight: bold; text-shadow: 1pt -1pt 0 #ffa7b3, -2pt 1pt 2pt #fff; background-color: rgba(255, 255, 255, 0.5); -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; height: 75%; line-height: 100%; -moz-box-shadow: 0px 0px 15px #999, 0px 0px 2px #000; -webkit-box-shadow: 0px 0px 15px #999, 0px 0px 2px #000; box-shadow: 0px 0px 15px #999, 0px 0px 2px #000; }
 #title span { font-size: 1.5rem; }
 #title p { background-color: rgba(55, 206, 235, 0.5); -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; height: 25%; margin: 0; padding-top: 1rem; }
 

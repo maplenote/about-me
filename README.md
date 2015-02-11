@@ -1,6 +1,6 @@
 
 網頁投影報 Demo: http://rawgit.com/maplenote/about-me/master/index.html <br>
-PS. 用兩天緊急寫出來的畫面，只能跑 PC 的 Chrome (還沒時間修) - 2015.2.11
+PS. 用兩天緊急寫出來的畫面，只能跑 PC 的 Browser (還沒時間修) - 2015.2.11
 <hr>
 <h1>黃鈺雯 (Maple)</h1>
 - 1985 年 8 月 30 日 出生
