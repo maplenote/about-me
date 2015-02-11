@@ -7,7 +7,7 @@ PS. 用兩天緊急寫出來的畫面，只能跑 PC 的 Chrome (還沒時間修
 - 國立台東大學資訊管理學系學士 (2003.09~2007.06)
 - FB: http://fb.com/maplenote
 <h1>工作經驗</h1>
-- 網頁工程師 ( 設計0.5 + 前端 + 後端 PHP + Apache + 資安0.5 ) 7年
+- 網頁工程師 ( 設計 0.5 + 前端 + 後端 PHP + Apache + 資安 0.5 ) 7年
 <h1>專精</h1>
 - PHP、Mysql
 - HTML、CSS、Javascript、JQuery
