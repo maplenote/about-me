@@ -31,15 +31,15 @@ $(function(){
     return false;
   })
   .on("touchstart",function(e){
-  	touchstartY=e.originalEvent.touches[0].pageY;
-  	mobileClickFlag = true;
-  	//TODO click動作會只有觸發touchstart
-  	setTimeout(function(){
-  			if(mobileClickFlag){
-  				nextAnimation(e);
-    		}
-    	},scrollMSec*2);
-  	//setTimeout(function(){alert("S:"+e.originalEvent.touches[0].pageY);},300);
+    touchstartY=e.originalEvent.touches[0].pageY;
+    mobileClickFlag = true;
+    //TODO click動作會只有觸發touchstart
+    setTimeout(function(){
+        if(mobileClickFlag){
+          nextAnimation(e);
+        }
+      },scrollMSec*2);
+    //setTimeout(function(){alert("S:"+e.originalEvent.touches[0].pageY);},300);
   })
   // .on("touchend",function(e){
   //   var tempTime = new Date().getTime();
@@ -47,34 +47,34 @@ $(function(){
   //   var nowTouchY=e.originalEvent.touches[0].pageY;
   //   //setTimeout(function(){alert("E:"+e.originalEvent.touches[0].pageY);},300);
   //   if(touchTime+scrollMSec<tempTime){
-  //   	if(touchstartY<=nowTouchY)
-  //   	{
-  //     	nextAnimation(e);
-  //   	}
-  //   	else if(touchstartY>nowTouchY+touchUpRange)
-  //   	{
-		// 		backAnimation(e);
-  //   	}
-  //   	touchTime=tempTime;
+  //    if(touchstartY<=nowTouchY)
+  //    {
+  //      nextAnimation(e);
+  //    }
+  //    else if(touchstartY>nowTouchY+touchUpRange)
+  //    {
+    //    backAnimation(e);
+  //    }
+  //    touchTime=tempTime;
   //   }
   // })
   .on("touchmove",function(e){
-  	var tempTime = new Date().getTime();
+    var tempTime = new Date().getTime();
     var nowTouchY=e.originalEvent.touches[0].pageY;
     mobileClickFlag = false;
     if(touchTime+scrollMSec<tempTime){
-    	if(touchstartY>nowTouchY)
-    	{
-      	nextAnimation(e);
-    	}
-    	else if(touchstartY<=nowTouchY+touchUpRange)
-    	{
-				backAnimation(e);
-    	}
-    	//setTimeout(function(){alert("E:"+e.originalEvent.touches[0].pageY);},300);
-    	touchTime=tempTime;
+      if(touchstartY>nowTouchY)
+      {
+        nextAnimation(e);
+      }
+      else if(touchstartY<=nowTouchY+touchUpRange)
+      {
+        backAnimation(e);
+      }
+      //setTimeout(function(){alert("E:"+e.originalEvent.touches[0].pageY);},300);
+      touchTime=tempTime;
     }
-  	e.preventDefault();  //不會觸發touchend
+    e.preventDefault();  //不會觸發touchend
   })
   .on('mousewheel', function(e) {
     var tempTime = new Date().getTime();
@@ -92,6 +92,6 @@ $(function(){
         scrollTime=tempTime;
       }
     }
-	});
+  });
 });
 

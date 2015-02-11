@@ -1,4 +1,4 @@
-/* Maple 2015.2.9  https://github.com/maplenote */
+/* Maple 2015.2.11  https://github.com/maplenote */
 var pageList = [];
 var nowPageFlag = 0;
 var defaultDuration = 400;
