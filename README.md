@@ -7,7 +7,7 @@ PS. 用兩天緊急寫出來的畫面，只能跑 PC 的 Chrome (還沒時間修
 - 國立台東大學資訊管理學系學士 (2003.09~2007.06)
 - FB: http://fb.com/maplenote
 <h1>工作經驗</h1>
-- 網頁工程師 ( 設計0.5 + 前端 + 後端 PHP + Apache + 資安0.5 ) 7年
+- 網頁工程師 ( 設計 0.5 + 前端 + 後端 PHP + Apache + 資安 0.5 ) 7年
 <h1>專精</h1>
 - PHP、Mysql
 - HTML、CSS、Javascript、JQuery
@@ -20,7 +20,7 @@ PS. 用兩天緊急寫出來的畫面，只能跑 PC 的 Chrome (還沒時間修
 - PhoneGap、AngularJs
 <h1>經驗</h1>
 - 大多為系統開發：討論區、B2B 網站、ERP 整合系統、知識管理平台、貨物追蹤系統
-- 獨立開發 Android APP (Java) 給客戶的詢價、回報價、下訂的功能 (含 php 後台)<br>https://play.google.com/store/apps/details?id=tw.com.fepm.fepminquiry 
+- 開發 Android APP (Java) 給客戶的詢價、回報價、下訂的功能 (含 php 後台)<br>https://play.google.com/store/apps/details?id=tw.com.fepm.fepminquiry 
 - 與第三方金流合作過 (Paypal、紅陽(?)、玉山銀行)
 - 曾寫過 RWD、AngularJs、C3 (專案開發中斷)
 <h1>其他</h1>
