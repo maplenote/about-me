@@ -130,13 +130,13 @@ function nextAnimation(e)
     //$docs.scrollTop(pageList[nowPageFlag].top);
     //IE,FF用html有效,body無效; chrome用body有效,html無效
     $('html,body').animate({
-      	scrollTop: pageList[nowPageFlag].top
-    	}, 200, 'swing',function(){
-	      if(nowPageAnimData.list.length>0)
-	      {
-	        doAnimation(nowPageAnimData.list[nowPageAnimData.nowStep]);
-	      }
-    	}
+        scrollTop: pageList[nowPageFlag].top
+      }, 200, 'swing',function(){
+        if(nowPageAnimData.list.length>0)
+        {
+          doAnimation(nowPageAnimData.list[nowPageAnimData.nowStep]);
+        }
+      }
     );
   }
   else
