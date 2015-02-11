@@ -16,7 +16,7 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
-html { width: 100%; height: 100%; overflow: hidden; -webkit-overflow-scrolling: touch; line-height: 1.5; font-size: 26px; }
+html { width: 100%; height: 100%; overflow: hidden; -webkit-overflow-scrolling: touch; line-height: 1.5; font-size: 32px; }
 
 body { width: 100%; height: 100%; font-family: "Questrial", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Lucida Grande", "Noto Sans T Chinese Thin", "Microsoft JhengHei", Arial, "Open Sans", sans-serif; }
 
