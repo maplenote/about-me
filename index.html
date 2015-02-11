@@ -10,10 +10,8 @@
   <link href="css/skilltree.css" rel="stylesheet" type="text/css">
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
-	<script src='js/pagedata.js'></script>
-	<script src='js/keyborad.js'></script>
-	<script src='js/clockbg.js'></script>
-	<script src='js/skilltree.js'></script>
+	<script src='js/pagecontrol.js'></script>
+	
 </head>
 <body>
   <header id="title" class="page">
@@ -24,13 +22,13 @@ https://github.com/maplenote</p>
   <section id="page2" class="page">
 		<h2>網頁工程師 經驗 7年</h2>
 		<ul class='inline'>
-			<li>設計 0.5</li>
-			<li>+ 前端</li>
-			<li>+ 後端</li>
-			<li>+ Server</li>
-			<li>+ 資安0.5</li>
+			<li data-step="1" data-action="show">設計 0.5</li>
+			<li data-step="2" data-action="show">+ 前端</li>
+			<li data-step="3" data-action="show">+ 後端</li>
+			<li data-step="4" data-action="show">+ Server</li>
+			<li data-step="5" data-action="show">+ 資安0.5</li>
 		</ul>
-		<p>
+		<p data-step="6" data-action="show">
 			大多都是獨立作業或帶後輩
 		</p>
   </section>
@@ -41,19 +39,19 @@ https://github.com/maplenote</p>
 	      <li>FrontEnd
 	        <ul>
 	          <li>HTML
-	            <ul>
+	            <ul data-step="1" data-action="">
 	              <li class='little'>HTML5</li>
 	            </ul>
 	          </li>
 	          <li>CSS
-	            <ul>
+	            <ul data-step="1" data-action="">
 	              <li>SASS</li>
 	              <li>CSS3</li>
 	              <li>RWD</li>
 	            </ul>
 	          </li>
 	          <li>Javascript
-	            <ul>
+	            <ul data-step="1" data-action="">
 	              <li>DOM</li>
 	              <li>JQuery</li>
 	              <li>JSON</li>
@@ -73,20 +71,20 @@ https://github.com/maplenote</p>
 	      <li>BackEnd
 	        <ul>
 	          <li>PHP
-	          	<ul>
+	          	<ul data-step="1" data-action>
 	          		<li>Codeigniter</li>
 	          		<li class='del'>Template</li>
 	          	</ul>
 	          </li>
 	          <li>MYSQL
-	          	<ul>
+	          	<ul data-step="1" data-action>
 	          		<li class='little'>MSSQL</li>
 	          		<li class='del'>SQL Script</li>
 	          		<li class='del'>Store Procedure</li>
 	          	</ul>
 	          </li>
 	          <li>JAVA (OCJP)
-							<ul>
+							<ul data-step="1" data-action>
 								<li>Android</li>
 							</ul>
 	          </li>
@@ -104,17 +102,17 @@ https://github.com/maplenote</p>
 	        <ul>
 	        	<li>MVC</li>
 	        	<li>SVN
-	        		<ul>
+	        		<ul data-step="1" data-action>
 	        			<li class='little'>Git</li>
 	        		</ul>
 	        	</li>
 	        	<li>系統架構規劃
-	        		<ul>
+	        		<ul data-step="1" data-action>
 	        			<li>編碼規範</li>
 	        		</ul>
 	        	</li>
 	        	<li>PhotoShop
-	        		<ul>
+	        		<ul data-step="1" data-action>
 	        			<li class='del'>Illustrator</li>
 	        		</ul>
 	        	</li>
@@ -126,14 +124,14 @@ https://github.com/maplenote</p>
   <section id="page4" class="page">
 		<h2>經歷</h2>
 		<ul class='list'>遊戲王有限公司  2007~2008
-			<li data-class='blue'>卡特斯電玩討論購物網站</li>
+			<li data-step="1" data-add-class='blue'>卡特斯電玩討論購物網站</li>
 		</ul>
 		<ul class='list'>禾一精機股份有限公司  2009 ~
 			<li>禾一官網</li>
-			<li data-class='blue'>禾一資訊整合系統</li>
+			<li data-step="1" data-add-class='blue'>禾一資訊整合系統</li>
 			<li>遞搜比國際 - 船舶零件買賣</li>
 			<li>知識管理平台</li>
-			<li data-class='blue'>禾一詢價 App (Android)</li>
+			<li data-step="1" data-add-class='blue'>禾一詢價 App (Android)</li>
 			<li>資料分析圖表 (試驗性)</li>
 		</ul>
   </section>
@@ -153,7 +151,7 @@ https://github.com/maplenote</p>
 		</header>
 		<p>
 			支援IE6~8 + Firefox<br>
-			<span class='gray'>(2008年9月2日 Chrome 測試版發佈)</span>
+			<span class='gray' data-step="1" data-action="show">(2008年9月2日 Chrome 測試版發佈)</span>
 		</p>
 		<figure>
 			<img src="img/cactus.jpg" alt="卡斯特" class='fill'>
@@ -162,10 +160,10 @@ https://github.com/maplenote</p>
   </section>
   <section id="page7" class="page">
 		<h2>說個笑話</h2>
-		<p class='size1_3'>老闆說: 3 天可以完成購物商城 !</p>
-		<p class='red size1_3'><strong>商城首頁 + 商品內容頁 + 購物車頁面</strong></p>
+		<p class='size1_3' data-step="1" data-action="show">老闆說: 3 天可以完成購物商城 !</p>
+		<p class='red size1_3' data-step="2" data-action="show"><strong>商城首頁 + 商品內容頁 + 購物車頁面</strong></p>
 		<br>
-		<p>
+		<p data-step="3" data-action="show">
 			<spna class='gray'>因為他答應玉山銀行 3 天後就要接金流</spna><br>
 			我燃燒了 7 天的生命...讓它蹦出來了
 		</p>
@@ -176,12 +174,13 @@ https://github.com/maplenote</p>
 			<li>玉山銀行 網路ATM</li>
 			<li>紅陽或是綠界(記憶模糊)</li>
 		</ul>
-		<br>
-		<p class='blue'>
+		
+		<p class='blue' data-step="1" data-action="show">
 			幫忙抓了一個漏洞<br>
 			<span class='size0_8'>使用者可以偽造已經刷卡完成的驗證</span>
 		</p>
-		<p>之後串接過 PayPal (2011 年)</p>
+		<br>
+		<p data-step="2" data-action="show">之後串接過 PayPal (2011 年)</p>
   </section>
   <section id="page9" class="page">
 		<header>
@@ -223,10 +222,10 @@ https://github.com/maplenote</p>
   <section id="page11" class="page">
 		<h2>Wireframe 與實際畫面對照</h2>
 		<figure class='groupimg'>
-			<img src="img/app3.jpg" alt="Wireframe" class='maxHeight maxWidth20'>
-			<img src="img/app4.jpg" alt="詢價APP" class='maxHeight maxWidth20'>
-			<img src="img/app5.jpg" alt="Wireframe" class='maxHeight maxWidth20'>
-			<img src="img/app6.jpg" alt="詢價APP" class='maxHeight maxWidth20'>
+			<img src="img/app3.jpg" alt="Wireframe" class='maxHeight maxWidth20' data-step="1" data-action="show">
+			<img src="img/app4.jpg" alt="詢價APP" class='maxHeight maxWidth20' data-step="1" data-action="show">
+			<img src="img/app5.jpg" alt="Wireframe" class='maxHeight maxWidth20' data-step="2" data-action="show">
+			<img src="img/app6.jpg" alt="詢價APP" class='maxHeight maxWidth20' data-step="2" data-action="show">
 		</figure>
   </section>
   <section id="page12" class="page">
@@ -282,17 +281,20 @@ https://github.com/maplenote</p>
   <section id="page15" class="page">
 		<h2>未來目標</h2>
 		<ul>
-			<li>前端: 跨裝置、模組化、往地雷區踩雷跟挖坑! </li>
-			<li>後端: 加強資安跟效能調教的部分 <span>(瓶頸)</span></li>
-			<li>其他: 團隊合作、NodeJs</li>
+			<li data-step="1" data-action="show">前端: 跨裝置、模組化、往地雷區踩雷跟挖坑! </li>
+			<li data-step="2" data-action="show">後端: 加強資安跟效能調教的部分 <span data-step="5" data-action="show" class='red'>(瓶頸)</span></li>
+			<li data-step="3" data-action="show">其他: 團隊合作、NodeJs</li>
 		</ul>
 		<br>
-		<p>寫網頁是興趣! 其實都會碰!</p>
-		<p>只差在自學的速度跟不上整個範圍</p>
+		<p data-step="4" data-action="show">寫網頁是興趣! 其實都會碰!</p>
+		<p data-step="5" data-action="show">只差在自學的速度跟不上整個範圍</p>
   </section>
   <footer id="footer" class="page">
 		<h1>Thanks</h1>
   </footer>
 	<aside id='clock'></aside>
+	<script src='js/keyborad.js'></script>
+	<script src='js/clockbg.js'></script>
+	<script src='js/skilltree.js'></script>
 </body>
 </html>

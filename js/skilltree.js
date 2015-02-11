@@ -4,22 +4,23 @@ $(function(){
     var maxLevel=getMaxLevel(this,"UL",0);
     $(this).data("maxlevel",maxLevel);
     //alert("maxLevel:"+maxLevel);
-  }).on('click',function(e){
-    var showLevel = $(this).data("showlevel");
-    var maxLevel = $(this).data("maxlevel");
-    if(maxLevel>showLevel)
-    {
-      $(this).data("showlevel",showLevel+1);
-      showLevelNode(this,'UL',showLevel+1);
-    }
-    else
-    {
-      for(var i = maxLevel; i > 1; i--){
-        showLevelNode(this,'UL',i); 
-      }
-      $(this).data("showlevel",i);
-    }
   });
+  // .on('click',function(e){
+  //   var showLevel = $(this).data("showlevel");
+  //   var maxLevel = $(this).data("maxlevel");
+  //   if(maxLevel>showLevel)
+  //   {
+  //     $(this).data("showlevel",showLevel+1);
+  //     showLevelNode(this,'UL',showLevel+1);
+  //   }
+  //   else
+  //   {
+  //     for(var i = maxLevel; i > 1; i--){
+  //       showLevelNode(this,'UL',i); 
+  //     }
+  //     $(this).data("showlevel",i);
+  //   }
+  // });
 });
 function getMaxLevel(node,tag,level)
 {

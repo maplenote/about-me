@@ -8,7 +8,7 @@ html
 	overflow: hidden
 	-webkit-overflow-scrolling: touch
 	line-height: 1.5
-	font-size: 24pt
+	font-size: 26px
 body
 	width: 100%
 	height : 100%
@@ -60,7 +60,7 @@ a
 		margin-left: 2rem
 		margin-right: 1rem
 #title
-	background: #3ACFEB url('../img/bg_title.jpg') no-repeat fixed left top
+	background: #3ACFEB url('../img/bg_title.jpg') no-repeat left top
 	+background-size(auto 100%)
 	+background-size(auto 100vh) //行動裝置
 	text-align: center
@@ -86,7 +86,7 @@ a
 		margin: 0
 		padding-top: 1rem
 #footer
-	background: #3ACFEB url('../img/bg_title.jpg') no-repeat fixed left top
+	background: #3ACFEB url('../img/bg_title.jpg') no-repeat left top
 	+background-size(auto 100%)
 	+background-size(auto 100vh) //行動裝置
 	text-align: center
@@ -113,7 +113,7 @@ h2
 	background-color: rgba(255,255,255,0.5)
 	font-weight: bold
 	padding-left: 1rem
-	margin-top: 0.3rem
+	margin-top: 1rem
 	margin-bottom: 0.3rem
 	min-width: 80%
 	position: relative
@@ -154,3 +154,7 @@ h2
 	font-size: 1.3em
 .size0_8
 	font-size: 0.8em
+.opacity0
+	+opacity(0)
+.opacity1
+	+opacity(1)

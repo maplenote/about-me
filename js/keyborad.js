@@ -12,22 +12,22 @@ $(function(){
       case 33: //pageup
       case 37: //left
       case 38: //up
-        backPage(e);
+        backAnimation(e);
         break;
       case 34: //pagedown
       case 39: //right
       case 40: //down
-        nextPage(e);
+        nextAnimation(e);
         break;
     }
     //console.log(e.keyCode);
   })
-  .on("click",nextPage)
+  .on("click",nextAnimation)
   .on("contextmenu",function(e){
     //e.stopPropagation()
     //e.stopImmediatePropagation();
     //以上兩個方式都失敗，只好用return false
-    backPage(e);
+    backAnimation(e);
     return false;
   })
   .on("touchstart",function(e){
@@ -36,7 +36,7 @@ $(function(){
   	//TODO click動作會只有觸發touchstart
   	setTimeout(function(){
   			if(mobileClickFlag){
-  				nextPage(e);
+  				nextAnimation(e);
     		}
     	},scrollMSec*2);
   	//setTimeout(function(){alert("S:"+e.originalEvent.touches[0].pageY);},300);
@@ -49,11 +49,11 @@ $(function(){
   //   if(touchTime+scrollMSec<tempTime){
   //   	if(touchstartY<=nowTouchY)
   //   	{
-  //     	nextPage(e);
+  //     	nextAnimation(e);
   //   	}
   //   	else if(touchstartY>nowTouchY+touchUpRange)
   //   	{
-		// 		backPage(e);
+		// 		backAnimation(e);
   //   	}
   //   	touchTime=tempTime;
   //   }
@@ -65,11 +65,11 @@ $(function(){
     if(touchTime+scrollMSec<tempTime){
     	if(touchstartY>nowTouchY)
     	{
-      	nextPage(e);
+      	nextAnimation(e);
     	}
     	else if(touchstartY<=nowTouchY+touchUpRange)
     	{
-				backPage(e);
+				backAnimation(e);
     	}
     	//setTimeout(function(){alert("E:"+e.originalEvent.touches[0].pageY);},300);
     	touchTime=tempTime;
@@ -81,14 +81,14 @@ $(function(){
  //    if (e.originalEvent.wheelDelta >= 0) {
  //      //Scroll up
  //      if(scrollTime+scrollMSec<tempTime){
- //        backPage(e);
+ //        backAnimation(e);
  //        scrollTime=tempTime;
  //      }
  //    }
  //    else {
  //      //Scroll down
  //      if(scrollTime+scrollMSec<tempTime){
- //        nextPage(e);
+ //        nextAnimation(e);
  //        scrollTime=tempTime;
  //      }
  //    }
