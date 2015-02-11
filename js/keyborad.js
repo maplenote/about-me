@@ -1,6 +1,6 @@
 /* Maple 2015.2.9  https://github.com/maplenote */
 var scrollMSec = 300;
-//var scrollTime = 0;
+var scrollTime = 0;
 var touchTime = 0;
 var touchstartY=0;
 var mobileClickFlag = false;
@@ -75,23 +75,23 @@ $(function(){
     	touchTime=tempTime;
     }
   	e.preventDefault();  //不會觸發touchend
-  });
- //  .on('mousewheel', function(e) {
- //    var tempTime = new Date().getTime();
- //    if (e.originalEvent.wheelDelta >= 0) {
- //      //Scroll up
- //      if(scrollTime+scrollMSec<tempTime){
- //        backAnimation(e);
- //        scrollTime=tempTime;
- //      }
- //    }
- //    else {
- //      //Scroll down
- //      if(scrollTime+scrollMSec<tempTime){
- //        nextAnimation(e);
- //        scrollTime=tempTime;
- //      }
- //    }
-	// });
+  })
+  .on('mousewheel', function(e) {
+    var tempTime = new Date().getTime();
+    if (e.originalEvent.wheelDelta >= 0) {
+      //Scroll up
+      if(scrollTime+scrollMSec<tempTime){
+        backAnimation(e);
+        scrollTime=tempTime;
+      }
+    }
+    else {
+      //Scroll down
+      if(scrollTime+scrollMSec<tempTime){
+        nextAnimation(e);
+        scrollTime=tempTime;
+      }
+    }
+	});
 });
 

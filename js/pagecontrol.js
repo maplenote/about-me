@@ -96,7 +96,6 @@ function checkAndScrollNowPage()
 	var $nowPage = $("#"+pageList[nowPageFlag].id);
 	var nowPageHeight = $nowPage[0].scrollHeight;
 	var nowtop = $nowPage.scrollTop();
-	console.log("winHeight:"+winHeight+"/nowPageHeight:"+nowPageHeight+"/nowtop:"+nowtop);
 	if(winHeight+nowtop>=nowPageHeight)
 	{
 		return true;
@@ -153,7 +152,6 @@ function doAnimation(domObject,msec)
   if(msec==undefined)
   {
   	msec = defaultDuration;
-  	console.log(defaultDuration);
   }
   if(addclass!==undefined && addclass!=='')
   {
