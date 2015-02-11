@@ -90,11 +90,37 @@ function setPosition(index)
 			$docs.scrollTop(pageList[index].top);
 		},100);
 }
+function checkAndScrollNowPage()
+{
+	var winHeight = $(window).height();
+	var $nowPage = $("#"+pageList[nowPageFlag].id);
+	var nowPageHeight = $nowPage[0].scrollHeight;
+	var nowtop = $nowPage.scrollTop();
+	console.log("winHeight:"+winHeight+"/nowPageHeight:"+nowPageHeight+"/nowtop:"+nowtop);
+	if(winHeight+nowtop>=nowPageHeight)
+	{
+		return true;
+	}
+	else
+	{
+		//移動一頁的距離
+		$nowPage.animate({
+			scrollTop: winHeight+nowtop
+		}, 300, 'swing');
+		//$nowPage.scrollTop(winHeight+nowtop);
+		return false;
+	}
+}
 function nextAnimation(e)
 {
 	var nowPageAnimData = pageList[nowPageFlag].Animation;
-	if(nowPageAnimData.nowStep>=nowPageAnimData.list.length-1) //本頁的動作都執行完畢
+	if(nowPageAnimData.nowStep>=nowPageAnimData.list.length-1) //本頁的指定動作都執行完畢
 	{
+		if(!checkAndScrollNowPage())
+		{
+			//移動卷軸
+			return;
+		}
 		if(nowPageFlag === pageList.length-1)
 	  {
 	    return ; //已經到頁尾
@@ -196,16 +222,8 @@ function backAnimation(e)
     --nowPageFlag;
     $('body').animate({
 			scrollTop: pageList[nowPageFlag].top
-		}, 300, 'swing',backCallBack());
+		}, 300, 'swing');
     //$docs.scrollTop(pageList[nowPageFlag].top);
   }
 }
 
-function nextCallBack()
-{
-
-}
-function backCallBack()
-{
-
-}
