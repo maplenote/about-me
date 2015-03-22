@@ -90,32 +90,52 @@ function setPosition(index)
       $docs.scrollTop(pageList[index].top);
     },100);
 }
-function checkAndScrollNowPage()
+function checkAndScrollNowPage(flag)
 {
   var winHeight = $(window).height();
   var $nowPage = $("#"+pageList[nowPageFlag].id);
   var nowPageHeight = $nowPage[0].scrollHeight;
   var nowtop = $nowPage.scrollTop();
-  if(winHeight+nowtop>=nowPageHeight)
+  if(flag=='back')
   {
-    return true;
-  }
-  else
-  {
-    //移動一頁的距離
-    $nowPage.animate({
-      scrollTop: winHeight+nowtop
-    }, 300, 'swing');
-    //$nowPage.scrollTop(winHeight+nowtop);
-    return false;
-  }
+  	console.log(nowtop);
+	  if(nowtop<=0)
+	  {
+	    return true;
+	  }
+	  else
+	  {
+	    //移動一頁的距離
+	    $nowPage.animate({
+	      scrollTop: ((nowtop-winHeight<0)?0:(nowtop-winHeight))
+	    }, 300, 'swing');
+	    //$nowPage.scrollTop(winHeight+nowtop);
+	    return false;
+	  }
+	}
+	else
+	{
+		if(winHeight+nowtop>=nowPageHeight)
+	  {
+	    return true;
+	  }
+	  else
+	  {
+	    //移動一頁的距離
+	    $nowPage.animate({
+	      scrollTop: winHeight+nowtop
+	    }, 300, 'swing');
+	    //$nowPage.scrollTop(winHeight+nowtop);
+	    return false;
+	  }
+	}
 }
 function nextAnimation(e)
 {
   var nowPageAnimData = pageList[nowPageFlag].Animation;
   if(nowPageAnimData.nowStep>=nowPageAnimData.list.length-1) //本頁的指定動作都執行完畢
   {
-    if(!checkAndScrollNowPage())
+    if(!checkAndScrollNowPage('next'))
     {
       //移動卷軸
       return;
@@ -213,18 +233,52 @@ function undoAnimation(domObject,msec)
 }
 function backAnimation(e)
 {
-  if(nowPageFlag === 0)
+	var nowPageAnimData = pageList[nowPageFlag].Animation;
+  if(nowPageAnimData.nowStep==0) //本頁的指定動作都執行完畢
   {
-    return ;
+  	
+    // if(!checkAndScrollNowPage('back'))
+    // {
+    //   //移動卷軸
+    //   return;
+    // }
+    if(nowPageFlag === 0)
+    {
+      return ; //已經到頁首
+    }
+    //回前一頁
+    undoAnimation(nowPageAnimData.list[nowPageAnimData.nowStep]);
+    --nowPageFlag;
+    --nowPageAnimData.nowStep;
+    var backPageAnimData = pageList[nowPageFlag].Animation;
+    if(backPageAnimData.nowStep>0)
+    {
+    	--backPageAnimData.nowStep; //因為會多1
+  	}
+    //$docs.scrollTop(pageList[nowPageFlag].top);
+    //IE,FF用html有效,body無效; chrome用body有效,html無效
+    $('html,body').animate({
+        scrollTop: pageList[nowPageFlag].top
+      }, 200, 'swing');
   }
   else
   {
-    --nowPageFlag;
-    //IE,FF用html有效,body無效; chrome用body有效,html無效
-    $('html,body').animate({
-      scrollTop: pageList[nowPageFlag].top
-    }, 300, 'swing');
-    //$docs.scrollTop(pageList[nowPageFlag].top);
+  	undoAnimation(nowPageAnimData.list[nowPageAnimData.nowStep]);
+    --nowPageAnimData.nowStep;
   }
+
+  // if(nowPageFlag === 0)
+  // {
+  //   return ;
+  // }
+  // else
+  // {
+  //   --nowPageFlag;
+  //   //IE,FF用html有效,body無效; chrome用body有效,html無效
+  //   $('html,body').animate({
+  //     scrollTop: pageList[nowPageFlag].top
+  //   }, 300, 'swing');
+  //   //$docs.scrollTop(pageList[nowPageFlag].top);
+  // }
 }
 
